@@ -1,0 +1,20 @@
+{
+    "medicos":[
+        {
+        "primeiroNome":"Maria",
+        "segundoNome":"Silva",
+        "idade":40
+        },
+        {
+        "primeiroNome":"Carlos",
+        "segundoNome":"Ferreira",
+        "idade":18            
+        },
+        {
+        "primeiroNome":"Carlos",
+        "segundoNome":"Ferreira",
+        "idade":9            
+        }
+    ]
+}
+
