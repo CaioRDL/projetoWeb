@@ -13,7 +13,6 @@ export class MedicoController {
     async one(request: Request, response: Response, next: NextFunction) {
         const id = parseInt(request.params.id)
 
-
         const medico = await this.medicoRepository.findOne({
             where: { id }
         })
@@ -25,13 +24,34 @@ export class MedicoController {
     }
 
     async save(request: Request, response: Response, next: NextFunction) {
+        const id = parseInt(request.params.id)
+
+        let medico = undefined 
+
         const { primeiroNome, segundoNome,idade } = request.body;
 
-        const medico = Object.assign(new Medico(), {
-            primeiroNome,
-            segundoNome,
-            idade,
-        })
+
+        if(id){
+            medico = await this.medicoRepository.findOne({
+            where: { id }
+            })
+            if(!medico){
+                return "Médico inexistente"
+            }
+
+            medico.primeiroNome = primeiroNome;
+            medico.segundoNome = segundoNome;
+            medico.idade = idade;
+
+
+        } else{
+            medico = Object.assign(new Medico(), {
+                primeiroNome,
+                segundoNome,
+                idade,
+            })
+
+        }
 
         return this.medicoRepository.save(medico)
     }

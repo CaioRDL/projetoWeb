@@ -1,18 +1,20 @@
 <div class="faind___container_body">
-  <mat-toolbar color="primary" class="faind___toolbar">
+  <mat-toolbar color="accent" class="faind___toolbar">
     <button mat-icon-button color="dark" (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1> Sistema Faculdade </h1> 
+    <h1> Sistema de Cadastro </h1> 
   </mat-toolbar>
 
   <mat-sidenav-container class="faind___mat-sidenav-container"> 
     <mat-sidenav #sidenav >
       <mat-nav-list>
-        <h3 mat-subheader> Opções </h3>
+        <div class="menu">
+        <h3 mat-subheader > Opções </h3>
         <a mat-list-item routerLink="/usuarios"> Usuários </a>
         <a mat-list-item routerLink="/medicos"> Medicos </a> 
         <h3 mat-subheader> Sair </h3>
+      </div>
       </mat-nav-list>
     </mat-sidenav>
 
@@ -21,4 +23,11 @@
     </mat-sidenav-content>
 
   </mat-sidenav-container>
+
+  <mat-toolbar color="accent">
+  <div class="foot">
+    <h1 style="color:whitesmoke; text-align: center;"> Todos os Direitos resevados </h1> 
+  </div>    
+    
+  </mat-toolbar>
 </div>

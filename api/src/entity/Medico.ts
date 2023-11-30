@@ -15,9 +15,4 @@ export class Medico extends EntidadeBase{
 
     @Column()
     idade: number
-
-
-
-
-
 }

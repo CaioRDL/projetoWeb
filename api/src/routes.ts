@@ -61,4 +61,9 @@ export const Routes = [{
     route: "/medicos/:id",
     controller: MedicoController,
     action: "remove"
+},{
+    method: "post",
+    route: "/medicos/:id",
+    controller: MedicoController,
+    action: "save"
 }]

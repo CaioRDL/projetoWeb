@@ -7,6 +7,7 @@
     bottom: 0;
     left:0;
     right: 0;
+    color: black;
 }
 
 .faind___toolbar{
@@ -18,3 +19,14 @@
     flex:1;
     margin-top: 0px;
 }
+h1{
+    color: rgb(2, 2, 2);
+    size: 30px;
+}
+.menu{
+    color: blueviolet;
+}
+/* .foot{
+    color: whitesmoke !important;
+    text-align: center !important;
+} */

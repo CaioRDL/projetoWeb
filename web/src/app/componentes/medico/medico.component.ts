@@ -33,7 +33,9 @@ export class MedicoComponent  implements OnInit {
   }
 
   async save(): Promise<void> {
-    const result = await this.medicoSrv.post(this.model);
+    let id = (this.model.id)?.toString()
+
+    const result = await this.medicoSrv.post(this.model,id);
     if (result.sucesso) {
       this.router.navigateByUrl('/medicos');
     }

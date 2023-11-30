@@ -32,7 +32,9 @@ export class UsuarioComponent  implements OnInit {
   }
 
   async save(): Promise<void> {
-    const result = await this.userSrv.post(this.model);
+    let id = (this.model.id)?.toString()
+
+    const result = await this.userSrv.post(this.model,id);
     if (result.sucesso) {
       this.router.navigateByUrl('/usuarios');
     }
